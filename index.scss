@@ -1,0 +1,312 @@
+@import "./mixin";
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amatic SC", cursive;
+}
+header {
+  nav {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    z-index: 2;
+    &:hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .fa-bars {
+      display: none;
+      color: white;
+      padding: 10px;
+      font-size: 1.7rem;
+      width: min-content;
+      transition: 350ms ease-in;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+      @include responsive576 {
+        display: block;
+      }
+    }
+    .desktop-nav {
+      display: flex;
+      list-style: none;
+      font-size: 1.7rem;
+      @include responsive576 {
+        display: none;
+      }
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          transition: 600ms;
+          padding: 10px;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+      position: relative;
+      transition: 400ms ease-in-out;
+      @include responsive576 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        position: absolute;
+        background-color: black;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+
+        button {
+          position: absolute;
+          transform: translateX(-50%);
+          top: 10px;
+          left: 50%;
+          padding: 10px;
+          font-size: 1.5rem;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 10px;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .nav-active {
+      left: 0;
+    }
+  }
+}
+main {
+  .imgsectionhead {
+    height: 750px;
+    background-color: aqua;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .imgsectionhead-button-ab {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      span {
+        font-size: 6.5rem;
+        color: white;
+      }
+      button {
+        font-size: 2.5rem;
+        padding: 10px;
+        color: white;
+        background-color: black;
+        border: none;
+        transition: 600ms;
+        &:hover {
+          background-color: rgb(190, 178, 178);
+          color: white;
+        }
+      }
+    }
+    // .imgsectionhead-open {
+    //   position: absolute;
+    //   bottom: 55px;
+    //   left: 10px;
+    //   background-color: black;
+    //   color: white;
+    //   font-size: 1.5rem;
+    //   padding: 5px;
+    // }
+  }
+  .menu-section {
+    background-color: black;
+    padding: 7% 17%;
+    h2 {
+      font-size: 4.5rem;
+      color: white;
+      text-align: center;
+    }
+    .div-button-menu {
+      display: flex;
+      justify-content: center;
+      .active.tab {
+        background-color: red;
+      }
+      button {
+        flex-grow: 1;
+        padding: 10px 0;
+        font-size: 2rem;
+        background-color: black;
+        color: white;
+        border: none;
+        border-top: 1px solid gray;
+        transition: 500ms ease-out;
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+    .tab-menu-contents {
+      display: flex;
+      justify-content: center;
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+        flex-grow: 1;
+      }
+      .menu-options-list {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 13px;
+        border-bottom: 1px solid gray;
+        div {
+          font-size: 2rem;
+          padding: 20px 0;
+          h3 {
+            display: inline-block;
+            margin-bottom: 25px;
+          }
+        }
+        span {
+          background-color: rgb(70, 67, 67);
+          padding: 5px 9px;
+          font-size: 2.2rem;
+          border-radius: 7px;
+          color: white;
+        }
+        .menu-options-list-alert {
+          background-color: red;
+        }
+        .menu-options-list-alert3 {
+          background-color: gray;
+        }
+      }
+    }
+  }
+  .about-all-option {
+    background-color: #8b5f5b;
+    padding: 100px 15%;
+    color: white;
+    h2 {
+      font-size: 5rem;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 50px;
+    }
+    .chef-img-logo {
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-size: 1.8rem;
+        line-height: 65px;
+      }
+
+      img {
+        width: 175px;
+        border-radius: 50%;
+      }
+    }
+    h3 {
+      font-size: 2rem;
+      padding: 25px 0;
+    }
+    .restaurant-img {
+      padding: 20px 0;
+      width: 105%;
+      img {
+        width: 100%;
+      }
+    }
+    .opening-hours {
+      display: flex;
+      font-size: 1.8rem;
+      div {
+        line-height: 55px;
+        &:nth-last-child(1) {
+          padding-left: 150px;
+        }
+      }
+    }
+  }
+  .map-img {
+    height: 500px;
+    background-color: aqua;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(0.7);
+    }
+  }
+  .contact-section {
+    background-color: #6c7a81;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 150px;
+    color: white;
+
+    h2 {
+      font-size: 4rem;
+    }
+    div {
+      p {
+        font-size: 1.8rem;
+        padding: 15px 0;
+        span {
+          background-color: black;
+        }
+      }
+      span {
+        font-size: 1.5rem;
+        padding: 5px 5px;
+      }
+    }
+    form {
+      display: flex;
+      margin-top: 4%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      input {
+        flex: 1;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+      button {
+        padding: 15px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

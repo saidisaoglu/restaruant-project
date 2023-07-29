@@ -1,0 +1,298 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amatic SC", cursive;
+}
+
+header nav {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+  z-index: 2;
+}
+header nav:hover {
+  background-color: rgb(0, 0, 0);
+}
+header nav .fa-bars {
+  display: none;
+  color: white;
+  padding: 10px;
+  font-size: 1.7rem;
+  width: -moz-min-content;
+  width: min-content;
+  transition: 350ms ease-in;
+}
+header nav .fa-bars:hover {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 576px) {
+  header nav .fa-bars {
+    display: block;
+  }
+}
+header nav .desktop-nav {
+  display: flex;
+  list-style: none;
+  font-size: 1.7rem;
+}
+@media (max-width: 576px) {
+  header nav .desktop-nav {
+    display: none;
+  }
+}
+header nav .desktop-nav li a {
+  text-decoration: none;
+  color: white;
+  transition: 600ms;
+  padding: 10px;
+}
+header nav .desktop-nav li a:hover {
+  background-color: white;
+  color: black;
+}
+header nav .mobile-nav {
+  display: none;
+  position: relative;
+  transition: 400ms ease-in-out;
+}
+@media (max-width: 576px) {
+  header nav .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    background-color: black;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 50vw;
+  }
+  header nav .mobile-nav button {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 10px;
+    left: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  header nav .mobile-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+header nav .nav-active {
+  left: 0;
+}
+
+main .imgsectionhead {
+  height: 750px;
+  background-color: aqua;
+}
+main .imgsectionhead img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+main .imgsectionhead .imgsectionhead-button-ab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+main .imgsectionhead .imgsectionhead-button-ab span {
+  font-size: 6.5rem;
+  color: white;
+}
+main .imgsectionhead .imgsectionhead-button-ab button {
+  font-size: 2.5rem;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  transition: 600ms;
+}
+main .imgsectionhead .imgsectionhead-button-ab button:hover {
+  background-color: rgb(190, 178, 178);
+  color: white;
+}
+main .menu-section {
+  background-color: black;
+  padding: 7% 17%;
+}
+main .menu-section h2 {
+  font-size: 4.5rem;
+  color: white;
+  text-align: center;
+}
+main .menu-section .div-button-menu {
+  display: flex;
+  justify-content: center;
+}
+main .menu-section .div-button-menu .active.tab {
+  background-color: red;
+}
+main .menu-section .div-button-menu button {
+  flex-grow: 1;
+  padding: 10px 0;
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-top: 1px solid gray;
+  transition: 500ms ease-out;
+}
+main .menu-section .div-button-menu button:hover {
+  background-color: red;
+}
+main .menu-section .tab-menu-contents {
+  display: flex;
+  justify-content: center;
+}
+main .menu-section .tab-menu-contents .tab-content {
+  display: none;
+}
+main .menu-section .tab-menu-contents .tab-content.active {
+  display: block;
+  flex-grow: 1;
+}
+main .menu-section .tab-menu-contents .menu-options-list {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 13px;
+  border-bottom: 1px solid gray;
+}
+main .menu-section .tab-menu-contents .menu-options-list div {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+main .menu-section .tab-menu-contents .menu-options-list div h3 {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+main .menu-section .tab-menu-contents .menu-options-list span {
+  background-color: rgb(70, 67, 67);
+  padding: 5px 9px;
+  font-size: 2.2rem;
+  border-radius: 7px;
+  color: white;
+}
+main .menu-section .tab-menu-contents .menu-options-list .menu-options-list-alert {
+  background-color: red;
+}
+main .menu-section .tab-menu-contents .menu-options-list .menu-options-list-alert3 {
+  background-color: gray;
+}
+main .about-all-option {
+  background-color: #8b5f5b;
+  padding: 100px 15%;
+  color: white;
+}
+main .about-all-option h2 {
+  font-size: 5rem;
+  text-align: center;
+  padding-bottom: 70px;
+}
+main .about-all-option p {
+  font-size: 2rem;
+  line-height: 50px;
+}
+main .about-all-option .chef-img-logo {
+  display: flex;
+  justify-content: space-between;
+}
+main .about-all-option .chef-img-logo span {
+  font-size: 1.8rem;
+  line-height: 65px;
+}
+main .about-all-option .chef-img-logo img {
+  width: 175px;
+  border-radius: 50%;
+}
+main .about-all-option h3 {
+  font-size: 2rem;
+  padding: 25px 0;
+}
+main .about-all-option .restaurant-img {
+  padding: 20px 0;
+  width: 105%;
+}
+main .about-all-option .restaurant-img img {
+  width: 100%;
+}
+main .about-all-option .opening-hours {
+  display: flex;
+  font-size: 1.8rem;
+}
+main .about-all-option .opening-hours div {
+  line-height: 55px;
+}
+main .about-all-option .opening-hours div:nth-last-child(1) {
+  padding-left: 150px;
+}
+main .map-img {
+  height: 500px;
+  background-color: aqua;
+}
+main .map-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.7);
+}
+main .contact-section {
+  background-color: #6c7a81;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 150px;
+  color: white;
+}
+main .contact-section h2 {
+  font-size: 4rem;
+}
+main .contact-section div p {
+  font-size: 1.8rem;
+  padding: 15px 0;
+}
+main .contact-section div p span {
+  background-color: black;
+}
+main .contact-section div span {
+  font-size: 1.5rem;
+  padding: 5px 5px;
+}
+main .contact-section form {
+  display: flex;
+  margin-top: 4%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+main .contact-section form input {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+main .contact-section form button {
+  padding: 15px;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=index.css.map */
